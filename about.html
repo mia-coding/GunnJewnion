@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | Gunn Jewnion</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Luckiest+Guy&display=swap" rel="stylesheet" />
+  <style>
+    /* Board grid container */
+    .board-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 800px;
+      margin: 2rem auto 4rem;
+    }
+
+    /* Each board member card */
+    .member {
+      background: #e6f0ff;
+      border-radius: 12px;
+      padding: 1.5rem 1rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 85, 170, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .member:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 85, 170, 0.35);
+    }
+
+    /* Circular member photos */
+    .member img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid #0055aa;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Member name styling */
+    .member h3 {
+      margin: 0 0 0.25rem;
+      color: #003366;
+      font-family: 'Luckiest Guy', cursive;
+      font-size: 1.5rem;
+      line-height: 1.2;
+    }
+
+    /* Role styling */
+    .member p em {
+      color: #004a99;
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    /* Email styling */
+    .member p a {
+      color: #0055aa;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      word-break: break-all;
+    }
+
+    .member p a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive adjustment for smaller screens */
+    @media (max-width: 600px) {
+      .board-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .member img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gunn Jewnion</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="join.html">Join Us</a>
+      <a href="judaism.html">Judaism</a>
+      <a href="gallery.html">Photo Gallery</a>
+      <a href="feedback.html">Give Us Feedback</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>Meet the Board</h2>
+      <p>We lead meetings, plan events, and create a warm and welcoming Jewish community at Gunn High School 💙</p>
+      <div class="board-grid">
+        <div class="member">
+          <img src="person.jpg" alt="Yael Gottesman" />
+          <h3>Yael Gottesman</h3>
+          <p><em>Co-President</em></p>
+          <p><a href="mailto:ygottesman823@gmail.com">ygottesman823@gmail.com</a></p>
+        </div>
+        <div class="member">
+          <img src="person.jpg" alt="Mia Yair" />
+          <h3>Mia Yair</h3>
+          <p><em>Co-President</em></p>
+          <p><a href="mailto:miayair26@gmail.com">miayair26@gmail.com</a></p>
+        </div>
+        <div class="member">
+          <img src="person.jpg" alt="Vice President" />
+          <h3>Placeholder Name</h3>
+          <p><em>Vice President</em></p>
+          <p><a href="mailto:vice@example.com">vice@example.com</a></p>
+        </div>
+        <div class="member">
+          <img src="person.jpg" alt="Secretary/Treasurer" />
+          <h3>Placeholder Name</h3>
+          <p><em>Secretary/Treasurer</em></p>
+          <p><a href="mailto:secretary@example.com">secretary@example.com</a></p>
+        </div>
+        <div class="member">
+          <img src="person.jpg" alt="Social Media" />
+          <h3>Placeholder Name</h3>
+          <p><em>Social Media</em></p>
+          <p><a href="mailto:social@example.com">social@example.com</a></p>
+        </div>
+        <div class="member">
+          <img src="person.jpg" alt="Recruitment" />
+          <h3>Placeholder Name</h3>
+          <p><em>Recruitment</em></p>
+          <p><a href="mailto:recruit@example.com">recruit@example.com</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gunn Jewnion | gunnsjewnion@gmail.com | (650) 690-1390</p>
+  </footer>
+</body>
+</html>
