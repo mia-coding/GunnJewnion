@@ -8,22 +8,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Luckiest+Guy&family=Great+Vibes&display=swap" rel="stylesheet" />
 
   <style>
-    /* Calendar-specific styles */
+    /* Calendar container */
     .calendar-container {
-      background: white;
-      border: 3px solid #d3d3d3;
+      background: #ffffff; /* match site style */
       border-radius: 15px;
-      padding: 20px;
+      padding: 30px 20px;
       max-width: 700px;
-      margin: 40px auto;
+      margin: 50px auto;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       text-align: center;
     }
 
     .calendar-container h2 {
-      font-family: 'Great Vibes', cursive;
+      font-family: 'Luckiest Guy', cursive;
       font-size: 2.5rem;
-      color: #0057b7;
+      color: #1a1a1a; /* consistent site heading color */
+      margin-bottom: 20px;
+    }
+
+    .calendar-container p {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      color: #333;
       margin-bottom: 20px;
     }
 
@@ -31,14 +37,15 @@
       display: grid;
       grid-template-columns: repeat(7, 1fr);
       gap: 10px;
-      margin: 20px auto;
+      margin: 0 auto;
     }
 
     .day {
-      color: black;
-      padding: 15px;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      padding: 12px;
       border-radius: 10px;
-      min-height: 50px;
+      min-height: 45px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -50,7 +57,7 @@
       color: white;
       border-radius: 50%;
       width: 45px;
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 1/1;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -58,6 +65,7 @@
       cursor: pointer;
       transition: 0.2s;
       font-weight: bold;
+      font-family: 'Poppins', sans-serif;
     }
 
     .event-day:hover {
@@ -68,58 +76,57 @@
     #event-details {
       margin-top: 30px;
       padding: 20px;
-      background: #fff;
+      background: #f9f9f9;
       border-radius: 12px;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
       max-width: 500px;
       margin-left: auto;
       margin-right: auto;
       border: 2px solid #89cfff;
       text-align: left;
+      font-family: 'Poppins', sans-serif;
       font-size: 1rem;
-      color: #444;
+      color: #333;
       transition: 0.3s;
     }
 
     #event-details h3 {
       margin-top: 0;
-      font-family: 'Great Vibes', cursive;
+      font-family: 'Luckiest Guy', cursive;
       font-size: 1.8rem;
-      color: #89cfff;
+      color: #0057b7;
       text-align: center;
     }
 
     #event-details p {
-      margin: 8px 0;
-      font-family: 'Poppins', sans-serif;
-      font-size: 1rem;
-    }
-
-    #event-details strong {
-      color: #5ebfff;
+      margin: 6px 0;
     }
 
     @media (max-width: 600px) {
+      .calendar-container {
+        padding: 20px;
+        margin: 30px auto;
+      }
+
       .calendar-container h2 {
         font-size: 2rem;
       }
 
       .calendar {
         grid-template-columns: repeat(7, minmax(20px, 1fr));
-        gap: 8px;
+        gap: 6px;
         overflow-x: auto;
         padding-bottom: 10px;
       }
 
       .day {
         min-height: 35px;
-        padding: 8px;
+        padding: 6px;
         font-size: 0.9rem;
       }
 
       .event-day {
         width: 20px;
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 1/1;
         font-size: 0.6rem;
       }
 
