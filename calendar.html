@@ -7,10 +7,12 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Luckiest+Guy&family=Great+Vibes&display=swap" rel="stylesheet" />
 
+  <!-- Calendar-specific CSS only -->
   <style>
-    /* Calendar container */
+    /* Calendar box */
     .calendar-container {
-      background: #ffffff; /* match site style */
+      background: white;
+      border: 3px solid #d3d3d3;
       border-radius: 15px;
       padding: 30px 20px;
       max-width: 700px;
@@ -20,9 +22,9 @@
     }
 
     .calendar-container h2 {
-      font-family: 'Luckiest Guy', cursive;
+      font-family: 'Great Vibes', cursive;
       font-size: 2.5rem;
-      color: #1a1a1a; /* consistent site heading color */
+      color: #0057b7;
       margin-bottom: 20px;
     }
 
@@ -41,8 +43,7 @@
     }
 
     .day {
-      font-family: 'Poppins', sans-serif;
-      color: #333;
+      color: black;
       padding: 12px;
       border-radius: 10px;
       min-height: 45px;
@@ -65,7 +66,6 @@
       cursor: pointer;
       transition: 0.2s;
       font-weight: bold;
-      font-family: 'Poppins', sans-serif;
     }
 
     .event-day:hover {
@@ -76,29 +76,32 @@
     #event-details {
       margin-top: 30px;
       padding: 20px;
-      background: #f9f9f9;
+      background: #fff;
       border-radius: 12px;
       max-width: 500px;
       margin-left: auto;
       margin-right: auto;
       border: 2px solid #89cfff;
       text-align: left;
-      font-family: 'Poppins', sans-serif;
       font-size: 1rem;
-      color: #333;
+      color: #444;
       transition: 0.3s;
     }
 
     #event-details h3 {
       margin-top: 0;
-      font-family: 'Luckiest Guy', cursive;
+      font-family: 'Great Vibes', cursive;
       font-size: 1.8rem;
-      color: #0057b7;
+      color: #89cfff;
       text-align: center;
     }
 
     #event-details p {
       margin: 6px 0;
+    }
+
+    #event-details strong {
+      color: #5ebfff;
     }
 
     @media (max-width: 600px) {
