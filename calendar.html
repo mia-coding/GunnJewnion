@@ -7,16 +7,15 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Luckiest+Guy&family=Great+Vibes&display=swap" rel="stylesheet" />
 
-  <!-- Calendar-specific CSS only -->
   <style>
-    /* Calendar box */
+    /* Calendar-specific styles only */
     .calendar-container {
       background: white;
       border: 3px solid #d3d3d3;
       border-radius: 15px;
       padding: 30px 20px;
       max-width: 700px;
-      margin: 50px auto;
+      margin: 30px auto;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       text-align: center;
     }
@@ -25,13 +24,13 @@
       font-family: 'Great Vibes', cursive;
       font-size: 2.5rem;
       color: #0057b7;
-      margin-bottom: 20px;
+      margin-bottom: 5px;
     }
 
-    .calendar-container p {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1rem;
-      color: #333;
+    .calendar-container h3 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #1a1a1a;
       margin-bottom: 20px;
     }
 
@@ -58,7 +57,7 @@
       color: white;
       border-radius: 50%;
       width: 45px;
-      aspect-ratio: 1/1;
+      aspect-ratio: 1 / 1;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -107,11 +106,15 @@
     @media (max-width: 600px) {
       .calendar-container {
         padding: 20px;
-        margin: 30px auto;
+        margin: 20px auto;
       }
 
       .calendar-container h2 {
         font-size: 2rem;
+      }
+
+      .calendar-container h3 {
+        font-size: 1.5rem;
       }
 
       .calendar {
@@ -140,7 +143,6 @@
     }
   </style>
 </head>
-
 <body>
   <header>
     <h1>Gunn Jewnion</h1>
@@ -156,33 +158,65 @@
   </header>
 
   <main>
-    <section class="calendar-container">
-      <h2>📅 Our Events Calendar</h2>
-      <p>Click on a date to see event info!</p>
+    <section class="section">
+      <h2>Our Events Calendar 📅</h2>
+      <p>Click on a date to see event details!</p>
 
-      <div class="calendar">
-        <!-- Days of the week -->
-        <div class="day">Sun</div>
-        <div class="day">Mon</div>
-        <div class="day">Tue</div>
-        <div class="day">Wed</div>
-        <div class="day">Thu</div>
-        <div class="day">Fri</div>
-        <div class="day">Sat</div>
+      <div class="calendar-container">
+        <h3>September 2025</h3>
 
-        <!-- Example week with event circles -->
-        <div class="day"></div>
-        <div class="event-day" data-title="BBYO Kickoff" data-time="5:00 PM" data-desc="Our first BBYO meeting to meet everyone!">1</div>
-        <div class="day"></div>
-        <div class="event-day" data-title="Shabbat Prep" data-time="3:30 PM" data-desc="Preparing for our first Shabbat event">3</div>
-        <div class="day"></div>
-        <div class="day"></div>
-        <div class="event-day" data-title="Game Night" data-time="6:00 PM" data-desc="Fun games and bonding night!">5</div>
-      </div>
+        <div class="calendar">
+          <!-- Days of the week -->
+          <div class="day"><strong>Sun</strong></div>
+          <div class="day"><strong>Mon</strong></div>
+          <div class="day"><strong>Tue</strong></div>
+          <div class="day"><strong>Wed</strong></div>
+          <div class="day"><strong>Thu</strong></div>
+          <div class="day"><strong>Fri</strong></div>
+          <div class="day"><strong>Sat</strong></div>
 
-      <div id="event-details">
-        <h3>Event Details</h3>
-        <p>Click on a date to see the event info here.</p>
+          <!-- September 2025 calendar starts Monday, Sept 1 -->
+          <div class="day"></div> <!-- Sun Aug 31 placeholder -->
+          <div class="day">1</div>
+          <div class="day">2</div>
+          <div class="day">3</div>
+          <div class="day">4</div>
+          <div class="day">5</div>
+          <div class="day">6</div>
+
+          <div class="day">7</div>
+          <div class="day">8</div>
+          <div class="day">9</div>
+          <div class="day">10</div>
+          <div class="event-day" data-title="Fall Club Fair - Day 1" data-time="Lunch" data-location="Senior Quad" data-desc="First day for fall club fair, featuring Monday, Tuesday, and Wednesday clubs!">11</div>
+          <div class="event-day" data-title="Fall Club Fair - Day 2" data-time="Lunch" data-location="Senior Quad" data-desc="Second day for fall club fair, featuring Thursday (JSU!) and Friday clubs!">12</div>
+          <div class="day">13</div>
+
+          <div class="day">14</div>
+          <div class="day">15</div>
+          <div class="day">16</div>
+          <div class="day">17</div>
+          <div class="day">18</div>
+          <div class="day">19</div>
+          <div class="day">20</div>
+
+          <div class="day">21</div>
+          <div class="day">22</div>
+          <div class="day">23</div>
+          <div class="day">24</div>
+          <div class="day">25</div>
+          <div class="day">26</div>
+          <div class="day">27</div>
+
+          <div class="day">28</div>
+          <div class="day">29</div>
+          <div class="day">30</div>
+        </div>
+
+        <div id="event-details">
+          <h3>Event Details</h3>
+          <p>Click on a date with a circle to see the details here!</p>
+        </div>
       </div>
     </section>
   </main>
@@ -199,11 +233,13 @@
       day.addEventListener('click', () => {
         const title = day.dataset.title;
         const time = day.dataset.time;
+        const location = day.dataset.location;
         const desc = day.dataset.desc;
 
         detailsBox.innerHTML = `
           <h3>${title}</h3>
           <p><strong>Time:</strong> ${time}</p>
+          <p><strong>Location:</strong> ${location}</p>
           <p>${desc}</p>
         `;
       });
