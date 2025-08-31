@@ -4,40 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Calendar | Gunn Jewnion</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet" />
-  
-  <!-- Calendar CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Luckiest+Guy&family=Great+Vibes&display=swap" rel="stylesheet" />
+
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f5f7fa;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
-      color: #89cfff; /* soft light blue text */
-    }
-    h1 {
-      font-family: 'Great Vibes', cursive;
-      font-size: 3.5rem;
-      margin: 0 auto 20px auto;
-      text-align: center;
-      color: #555; /* softer grayish color */
-    }
+    /* Calendar-specific styles */
     .calendar-container {
       background: white;
-      border: 3px solid #d3d3d3; /* light gray border */
+      border: 3px solid #d3d3d3;
       border-radius: 15px;
       padding: 20px;
       max-width: 700px;
-      margin: 0 auto;
+      margin: 40px auto;
       box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      text-align: center;
     }
+
+    .calendar-container h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.5rem;
+      color: #0057b7;
+      margin-bottom: 20px;
+    }
+
     .calendar {
       display: grid;
       grid-template-columns: repeat(7, 1fr);
       gap: 10px;
       margin: 20px auto;
     }
+
     .day {
       color: black;
       padding: 15px;
@@ -48,12 +44,13 @@
       justify-content: center;
       font-weight: 500;
     }
+
     .event-day {
-      background: #89cfff; /* light blue */
+      background: #89cfff;
       color: white;
       border-radius: 50%;
       width: 45px;
-      aspect-ratio: 1 / 1; /* keeps it a perfect circle */
+      aspect-ratio: 1 / 1;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -62,9 +59,12 @@
       transition: 0.2s;
       font-weight: bold;
     }
+
     .event-day:hover {
-      background: #b3e0ff; /* lighter blue on hover */
+      background: #b3e0ff;
+      transform: scale(1.1);
     }
+
     #event-details {
       margin-top: 30px;
       padding: 20px;
@@ -74,36 +74,34 @@
       max-width: 500px;
       margin-left: auto;
       margin-right: auto;
-      border: 2px solid #89cfff; /* light blue border */
+      border: 2px solid #89cfff;
       text-align: left;
       font-size: 1rem;
       color: #444;
+      transition: 0.3s;
     }
-    #event-details h2 {
+
+    #event-details h3 {
       margin-top: 0;
       font-family: 'Great Vibes', cursive;
-      font-size: 2.2rem;
-      color: #89cfff; /* light blue */
+      font-size: 1.8rem;
+      color: #89cfff;
       text-align: center;
     }
+
     #event-details p {
       margin: 8px 0;
       font-family: 'Poppins', sans-serif;
       font-size: 1rem;
     }
+
     #event-details strong {
-      color: #5ebfff; /* slightly darker light blue */
+      color: #5ebfff;
     }
 
-    /* Mobile responsiveness */
     @media (max-width: 600px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-
-      .calendar-container {
-        padding: 15px;
-        max-width: 100%;
+      .calendar-container h2 {
+        font-size: 2rem;
       }
 
       .calendar {
@@ -120,9 +118,9 @@
       }
 
       .event-day {
-        width: 20px;          /* very small circle on mobile */
-        aspect-ratio: 1 / 1;  /* stays perfectly round */
-        font-size: 0.6rem;    /* smaller text inside the circle */
+        width: 20px;
+        aspect-ratio: 1 / 1;
+        font-size: 0.6rem;
       }
 
       #event-details {
@@ -132,6 +130,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Gunn Jewnion</h1>
@@ -148,13 +147,57 @@
 
   <main>
     <section class="calendar-container">
-      <h1>📅 Calendar Coming Soon! 📅</h1>
-      <p>All our events will appear here once we start hosting meetings 🎉</p>
+      <h2>📅 Our Events Calendar</h2>
+      <p>Click on a date to see event info!</p>
+
+      <div class="calendar">
+        <!-- Days of the week -->
+        <div class="day">Sun</div>
+        <div class="day">Mon</div>
+        <div class="day">Tue</div>
+        <div class="day">Wed</div>
+        <div class="day">Thu</div>
+        <div class="day">Fri</div>
+        <div class="day">Sat</div>
+
+        <!-- Example week with event circles -->
+        <div class="day"></div>
+        <div class="event-day" data-title="BBYO Kickoff" data-time="5:00 PM" data-desc="Our first BBYO meeting to meet everyone!">1</div>
+        <div class="day"></div>
+        <div class="event-day" data-title="Shabbat Prep" data-time="3:30 PM" data-desc="Preparing for our first Shabbat event">3</div>
+        <div class="day"></div>
+        <div class="day"></div>
+        <div class="event-day" data-title="Game Night" data-time="6:00 PM" data-desc="Fun games and bonding night!">5</div>
+      </div>
+
+      <div id="event-details">
+        <h3>Event Details</h3>
+        <p>Click on a date to see the event info here.</p>
+      </div>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Gunn Jewnion | gunnsjewnion@gmail.com</p>
   </footer>
+
+  <script>
+    const eventDays = document.querySelectorAll('.event-day');
+    const detailsBox = document.getElementById('event-details');
+
+    eventDays.forEach(day => {
+      day.addEventListener('click', () => {
+        const title = day.dataset.title;
+        const time = day.dataset.time;
+        const desc = day.dataset.desc;
+
+        detailsBox.innerHTML = `
+          <h3>${title}</h3>
+          <p><strong>Time:</strong> ${time}</p>
+          <p>${desc}</p>
+        `;
+      });
+    });
+  </script>
 </body>
 </html>
