@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calendar | Gunn Jewnion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet" />
+  
+  <!-- Calendar CSS -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      color: #89cfff; /* soft light blue text */
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      margin: 0 auto 20px auto;
+      text-align: center;
+      color: #555; /* softer grayish color */
+    }
+    .calendar-container {
+      background: white;
+      border: 3px solid #d3d3d3; /* light gray border */
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+      margin: 20px auto;
+    }
+    .day {
+      color: black;
+      padding: 15px;
+      border-radius: 10px;
+      min-height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+    }
+    .event-day {
+      background: #89cfff; /* light blue */
+      color: white;
+      border-radius: 50%;
+      width: 45px;
+      aspect-ratio: 1 / 1; /* keeps it a perfect circle */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      cursor: pointer;
+      transition: 0.2s;
+      font-weight: bold;
+    }
+    .event-day:hover {
+      background: #b3e0ff; /* lighter blue on hover */
+    }
+    #event-details {
+      margin-top: 30px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      border: 2px solid #89cfff; /* light blue border */
+      text-align: left;
+      font-size: 1rem;
+      color: #444;
+    }
+    #event-details h2 {
+      margin-top: 0;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.2rem;
+      color: #89cfff; /* light blue */
+      text-align: center;
+    }
+    #event-details p {
+      margin: 8px 0;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+    }
+    #event-details strong {
+      color: #5ebfff; /* slightly darker light blue */
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .calendar-container {
+        padding: 15px;
+        max-width: 100%;
+      }
+
+      .calendar {
+        grid-template-columns: repeat(7, minmax(20px, 1fr));
+        gap: 8px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+      }
+
+      .day {
+        min-height: 35px;
+        padding: 8px;
+        font-size: 0.9rem;
+      }
+
+      .event-day {
+        width: 20px;          /* very small circle on mobile */
+        aspect-ratio: 1 / 1;  /* stays perfectly round */
+        font-size: 0.6rem;    /* smaller text inside the circle */
+      }
+
+      #event-details {
+        padding: 15px;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gunn Jewnion</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="join.html">Join Us</a>
+      <a href="judaism.html">Judaism</a>
+      <a href="calendar.html" class="active">Calendar</a>
+      <a href="gallery.html">Photo Gallery</a>
+      <a href="feedback.html">Give Us Feedback</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="calendar-container">
+      <h1>📅 Calendar Coming Soon! 📅</h1>
+      <p>All our events will appear here once we start hosting meetings 🎉</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gunn Jewnion | gunnsjewnion@gmail.com</p>
+  </footer>
+</body>
+</html>
