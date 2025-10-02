@@ -73,28 +73,70 @@ nav a.active {
   transform: scale(1.05);
 }
 
-.button-container {
+.feedback-form {
+  max-width: 600px;
+  margin: 0 auto;
   text-align: left;
-  margin-top: 1rem;
-  position: relative;
+}
+
+.form-input {
   width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #0055aa;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.form-input::placeholder {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: #000000;
+  font-style: normal;
+  opacity: 0.8;
+}
+
+textarea#message {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: #003366;
+  line-height: 1.4;
+  padding: 12px;
+  border: 2px solid #0055aa;
+  border-radius: 8px;
+  resize: vertical;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: block;
+}
+
+textarea#message::placeholder {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: #000000;
+  font-style: normal;
+  opacity: 0.8;
 }
 
 #send-button {
-  background-color: #0055aa;
+  background-color: #004080;
   color: white;
+  padding: 12px 24px;
   border: none;
-  border-radius: 6px;
-  padding: 0.6rem 1.2rem;
-  font-weight: 700;
+  border-radius: 8px;
   font-family: 'Poppins', sans-serif;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 #send-button:hover {
-  background-color: #0096FF;
-  box-shadow: 0 0 8px #0096FF;
+  background-color: #3399ff;
 }
 
 .school-map-container {
