@@ -24,15 +24,26 @@
   <main>
     <section class="section">
       <h2>We'd Love Your Feedback!</h2>
-      <form action="https://formspree.io/f/mblyvpqa" method="POST">
+      <form action="https://formspree.io/f/mblyvpqa" method="POST" class="feedback-form">
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email!"
+          required
+          class="form-input"
+        />
+
         <textarea
           id="message"
           name="message"
           rows="8"
           placeholder="Write your feedback or question here... We love hearing from you!"
           required
+          class="form-input"
         ></textarea>
-        <br />
+
         <div class="button-container">
           <button type="submit" id="send-button">Send</button>
         </div>
