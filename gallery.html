@@ -6,6 +6,34 @@
   <title>Photo Gallery | Gunn Jewnion</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Luckiest+Guy&display=swap" rel="stylesheet" />
+  <style>
+    /* Lightbox modal styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #000;
+    }
+    .lightbox .close-btn {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -47,12 +75,44 @@
     </section>
   </main>
     <div>
-      <br>
-      <br>
-      <br>
+      <br><br><br>
     </div>
   <footer>
     <p>&copy; 2025 Gunn Jewnion | gunnsjewnion@gmail.com</p>
   </footer>
+
+  <!-- Lightbox container -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <img id="lightboxImg" src="" alt="enlarged photo"/>
+  </div>
+
+  <script>
+    // Get elements
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+    const closeBtn = document.getElementById("closeBtn");
+    const images = document.querySelectorAll(".gallery-row img");
+
+    // Open lightbox on click
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+      });
+    });
+
+    // Close when clicking X
+    closeBtn.addEventListener("click", () => {
+      lightbox.style.display = "none";
+    });
+
+    // Also close when clicking outside the image
+    lightbox.addEventListener("click", (e) => {
+      if (e.target !== lightboxImg) {
+        lightbox.style.display = "none";
+      }
+    });
+  </script>
 </body>
 </html>
